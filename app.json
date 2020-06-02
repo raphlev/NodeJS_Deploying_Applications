@@ -1,0 +1,25 @@
+{
+  "name": "node_deploy",
+  "scripts": {},
+  "env": {
+    "MONGO_URL": {
+      "required": true,
+      "value": "mongodb+srv://learning:learning@nodedeploy-ehxpw.mongodb.net/nodejsdeploy?authSource=admin&replicaSet=nodedeploy-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+    },
+    "NG_CMD": {
+      "required": true,
+      "value": "prod"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }]
+}
